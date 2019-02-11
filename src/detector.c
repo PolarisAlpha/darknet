@@ -1342,7 +1342,7 @@ void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filenam
                 // JSON output for each detected object
                 fprintf(outfp, "{");
                 fprintf(outfp, "\"category\":\"%s\",", names[best_class]);
-                fprintf(outfp, "\"confidence\":\"%.0f%%\",", selected_detections[i].det.prob[best_class] * 100);
+                fprintf(outfp, "\"confidence\":\"%.0f\",", selected_detections[i].det.prob[best_class]);
                 fprintf(outfp, "\"leftX\":\"%.0f\",", (selected_detections[i].det.bbox.x - selected_detections[i].det.bbox.w / 2)*im.w);
                 fprintf(outfp, "\"topY\":\"%.0f\",", (selected_detections[i].det.bbox.y - selected_detections[i].det.bbox.h / 2)*im.h);
                 fprintf(outfp, "\"width\":\"%.0f\",", selected_detections[i].det.bbox.w*im.w);
